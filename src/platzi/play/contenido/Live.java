@@ -1,6 +1,6 @@
 package platzi.play.contenido;
 
-public class VideoLargo {
+public class Live {
 
     public String titulo;
     public String descripcion;

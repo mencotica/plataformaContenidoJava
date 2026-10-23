@@ -1,8 +1,6 @@
 package platzi.play;
 
-import platzi.play.contenido.VideoLargo;
-
-import java.util.Scanner;
+import platzi.play.contenido.Live;
 
 public class Main {
     public static void main(String[] args) {
@@ -19,10 +17,12 @@ public class Main {
 //
 //        System.out.println(nombre + " pudes ver contenido +" + edad);
 
-        VideoLargo videoLargo = new VideoLargo();
-        videoLargo.titulo = "El señor de los anillos";
-        videoLargo.anioPublicacion = 2024;
-        videoLargo.genero = "Fantasia";
-        videoLargo.calificar(4.5);
+        Live Live = new Live();
+        Live.titulo = "El señor de los anillos";
+        Live.anioPublicacion = 2024;
+        Live.genero = "Fantasia";
+        Live.calificar(4.5);
+
+        System.out.println(Live.obtenerFichaTecnica());
     }
 }
