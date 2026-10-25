@@ -1,22 +1,24 @@
 package platzi.play.contenido;
 
+import java.time.LocalDate;
+
 public class Live {
 
     public String titulo;
     public String descripcion;
     public int duracion;
     public String genero;
-    public int anioPublicacion;
+    public LocalDate fechaEstreno;
     public double calificacion;
     public boolean disponible;
 
 
-    public static void reproducir(){
+    public void reproducir(){
         System.out.println("Reproduciendo " + this.titulo);
     }
 
     public String obtenerFichaTecnica () {
-        return titulo + " (" + anioPublicacion + ")\n" + "Genero: " + genero +
+        return titulo + " (" + fechaEstreno.getYear() + ")\n" + "Genero: " + genero +
                 "\nCalificacion: " + calificacion + "/5" ;
     }
 

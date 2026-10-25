@@ -1,6 +1,10 @@
 package platzi.play;
 
 import platzi.play.contenido.Live;
+import platzi.play.plataforma.UsuarioVisualizador;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public class Main {
     public static void main(String[] args) {
@@ -17,12 +21,17 @@ public class Main {
 //
 //        System.out.println(nombre + " pudes ver contenido +" + edad);
 
-        Live Live = new Live();
-        Live.titulo = "El señor de los anillos";
-        Live.anioPublicacion = 2024;
-        Live.genero = "Fantasia";
-        Live.calificar(4.5);
+        Live live = new Live();
+        live.titulo = "Stream del momento";
+        live.fechaEstreno = LocalDate.now();
+        live.genero = "Fantasia";
+        live.calificar(4.5);
 
-        System.out.println(Live.obtenerFichaTecnica());
+        UsuarioVisualizador usuario = new UsuarioVisualizador();
+        usuario.nombre = "santiago";
+        usuario.fechaRegistro = LocalDateTime.now();
+        usuario.ver(live);
+        System.out.println(live.obtenerFichaTecnica());
+
     }
 }
