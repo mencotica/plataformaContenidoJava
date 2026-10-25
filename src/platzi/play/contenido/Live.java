@@ -11,8 +11,8 @@ public class Live {
     public boolean disponible;
 
 
-    public void reproducir (){
-        System.out.println("Reproduciendo " + titulo);
+    public static void reproducir(){
+        System.out.println("Reproduciendo " + this.titulo);
     }
 
     public String obtenerFichaTecnica () {

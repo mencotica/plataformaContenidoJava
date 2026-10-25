@@ -8,7 +8,8 @@ public class UsuarioVisualizador {
     public String email;
 
     public void ver (Live live) {
-        System.out.println("El usuario... " + );
+        System.out.println(this.nombre + " está viendo ..." );
+        Live.reproducir();
     }
 
 }
