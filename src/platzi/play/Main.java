@@ -26,6 +26,18 @@ public class Main {
         live.fechaEstreno = LocalDate.now();
         live.genero = "Fantasia";
         live.calificar(4.5);
+        live.duracion = 120;
+        // casteo implicito
+        long duracionLong = live.duracion;
+        System.out.println("Duracion Long: " + duracionLong);
+
+        // casteo explicito
+        int calificacionInt = (int) live.calificacion;
+        System.out.println("Calificacion int: " + calificacionInt);
+
+        long numeroDePremios = Long.parseLong("25");
+
+        System.out.println("El numero de premios: " + numeroDePremios);
 
         UsuarioVisualizador usuario = new UsuarioVisualizador();
         usuario.nombre = "santiago";
