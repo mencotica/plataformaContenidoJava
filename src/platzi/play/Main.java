@@ -2,42 +2,26 @@ package platzi.play;
 
 import platzi.play.contenido.Live;
 import platzi.play.plataforma.UsuarioVisualizador;
+import platzi.play.util.ScanenerUtils;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class Main {
     public static void main(String[] args) {
-//        System.out.println("hola mundo!");
-//
-//        Scanner scanner = new Scanner(System.in);
-//        System.out.println("Cual es tu nombre?");
-//        String nombre = scanner.nextLine();
-//
-//        System.out.println("hola " + nombre + ", esto es platzi play!");
-//
-//        System.out.println(nombre + "cuantos años tienes?");
-//        int edad = scanner.nextByte();
-//
-//        System.out.println(nombre + " pudes ver contenido +" + edad);
+
+        String nombre = ScanenerUtils.capturarTexto("cual es el nombre");
+        String genero = ScanenerUtils.capturarTexto("a que genero pertenece");
+        double calificar = ScanenerUtils.capturarDecimal("que calificacion le das");
+        int duracion = ScanenerUtils.capturarEntero("duracion del live");
 
         Live live = new Live();
-        live.titulo = "Stream del momento";
+        live.titulo = nombre;
         live.fechaEstreno = LocalDate.now();
-        live.genero = "Fantasia";
-        live.calificar(4.5);
-        live.duracion = 120;
-        // casteo implicito
-        long duracionLong = live.duracion;
-        System.out.println("Duracion Long: " + duracionLong);
+        live.genero = genero;
+        live.calificar(calificar);
+        live.duracion = duracion;
 
-        // casteo explicito
-        int calificacionInt = (int) live.calificacion;
-        System.out.println("Calificacion int: " + calificacionInt);
-
-        long numeroDePremios = Long.parseLong("25");
-
-        System.out.println("El numero de premios: " + numeroDePremios);
 
         UsuarioVisualizador usuario = new UsuarioVisualizador();
         usuario.nombre = "santiago";
