@@ -4,26 +4,26 @@ import java.util.Scanner;
 
 public class ScanenerUtils {
 
-    public static Scanner scanner = new Scanner(System.in);
+    public static final Scanner SCANNER = new Scanner(System.in);
 
     public static String capturarTexto (String mensaje) {
         System.out.println(mensaje + ": ");
-        return scanner.nextLine();
+        return SCANNER.nextLine();
     }
 
     public static int capturarEntero (String mensaje) {
         System.out.println(mensaje + ": ");
 
-        int dato = scanner.nextInt();
-        scanner.nextLine(); //este comando desprecia el enter
+        int dato = SCANNER.nextInt();
+        SCANNER.nextLine(); //este comando desprecia el enter
         return dato;
     }
 
     public static double capturarDecimal (String mensaje) {
         System.out.println(mensaje + ": ");
 
-        double dato = scanner.nextDouble();
-        scanner.nextLine();
+        double dato = SCANNER.nextDouble();
+        SCANNER.nextLine();
         return dato;
     }
 }
