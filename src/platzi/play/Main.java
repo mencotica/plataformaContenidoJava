@@ -25,11 +25,14 @@ public class Main {
 
         Live live = new Live(nombreLive, duracion, genero, calificar);
 
+        plataforma.agregar(live);
+        System.out.println("Numero de elementos en la plataforma " + plataforma.getContenido().size());
+        plataforma.mostrarTitulos();
 
+       UsuarioVisualizador usuario = new UsuarioVisualizador(nombreUsuarios, apellidoUsuarios, email);
+       usuario.ver(live);
+       System.out.println(live.obtenerFichaTecnica());
 
-        UsuarioVisualizador usuario = new UsuarioVisualizador(nombreUsuarios, apellidoUsuarios, email);
-        usuario.ver(live);
-        System.out.println(live.obtenerFichaTecnica());
 
     }
 }
